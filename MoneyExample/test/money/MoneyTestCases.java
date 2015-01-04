@@ -5,19 +5,15 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class MoneyTestCases {
-	@Test
-	public void testMultiplication() {
-		Dollar amount= new Dollar(5);
-		Dollar product= amount.times(2);
-		assertEquals(5, amount.amount);
-		assertEquals(10, product.amount);
-		product= amount.times(3);
-		assertEquals(15, product.amount);
+
+	@Test public void testMultiplication() {
+		Dollar five= new Dollar(5);
+		assertEquals(new Dollar(10), five.times(2));
+		assertEquals(new Dollar(15), five.times(3));
 	}
-	
-	@Test
-	public void testEquality() {
-		assertTrue(new Dollar(10).equals(new Dollar(10)));
-		assertFalse(new Dollar(10).equals(new Dollar(11)));
+
+	@Test public void testEquality() {
+		assertTrue(new Dollar(5).equals(new Dollar(5)));
+		assertFalse(new Dollar(5).equals(new Dollar(6)));
 	}
 }

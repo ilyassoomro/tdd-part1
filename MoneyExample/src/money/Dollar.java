@@ -1,10 +1,12 @@
 package money;
 
+
 public class Dollar {
-	int	amount;
+
+	private int amount;
 
 	Dollar(int amount) {
-		this.amount = amount;
+		this.amount= amount;
 	}
 
 	Dollar times(int multiplier) {
@@ -12,7 +14,8 @@ public class Dollar {
 	}
 
 	public boolean equals(Object object) {
-		Dollar dollar = (Dollar) object;
+		Dollar dollar= (Dollar) object;
 		return amount == dollar.amount;
 	}
+
 }
